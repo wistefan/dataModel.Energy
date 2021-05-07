@@ -37,7 +37,7 @@ jobs:
         with:
           model-name: 'PhotovoltaicDevice'
           repository-name: 'dataModel.Energy'
-          incubated: 'true'
+          model-folder: 'PhotovoltaicDevice_incubated'
 
       - uses: wistefan/create-openapi-yaml@master
         name: Generate swagger.yaml
