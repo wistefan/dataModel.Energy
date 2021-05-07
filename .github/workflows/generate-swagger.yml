@@ -18,7 +18,7 @@ jobs:
         name: Checkout
 
       - name: Fetch history
-          run: git fetch --prune --unshallow
+        run: git fetch --prune --unshallow
 
       - uses:  wistefan/create-openapi-yaml@master
         name: Generate swagger.yaml
