@@ -6,7 +6,7 @@
 components:
   schemas: 
     ThreePhaseAcMeasurement: 
-      $ref: "https://smart-data-models.github.io/dataModel.Energy/ThreePhaseAcMeasurement/model.yaml#/ThreePhaseAcMeasurement"
+      $ref: "https://smart-data-models.github.iodataModel.Energy/ThreePhaseAcMeasurement//github/workspace/ThreePhaseAcMeasurement/model.yaml#/ThreePhaseAcMeasurement"
 info:
   description:  |
     An electrical  measurement from a system that uses three phase alternating current.
@@ -19,8 +19,7 @@ paths:
     get: 
       description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
       parameters: 
-        - 
-          in: query
+        - in: query
           name: type
           required: true
           schema: 
@@ -28,25 +27,24 @@ paths:
               - ThreePhaseAcMeasurement
             type: string
       responses: 
-        ? "200"
-        : 
+        "200": 
           content: 
             application/ld+json: 
               examples: 
                 keyvalues: 
                   summary: "Key-Values Pairs"
                   value: 
-                    - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Energy/ThreePhaseAcMeasurement/examples/example.json"
+                    - $ref: "https://smart-data-models.github.io/dataModel.Energy/ThreePhaseAcMeasurement/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
-                    - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Energy/ThreePhaseAcMeasurement/examples/example-normalized.jsonld"
+                    - $ref: "https://smart-data-models.github.io/dataModel.Energy/ThreePhaseAcMeasurement/examples/example-normalized.jsonld"
           description: OK
       tags: 
         - ngsi-ld
+        - ThreePhaseAcMeasurement
 tags: 
-  - 
-    description: "NGSI-LD Linked-data Format"
+  - description: "NGSI-LD Linked-data Format"
     name: ngsi-ld
+  - description: "An electrical  measurement from a system that uses three phase alternating current."
+    name: ThreePhaseAcMeasurement
