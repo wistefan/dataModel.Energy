@@ -38,5 +38,4 @@ jobs:
         uses: yuzutech/annotations-action@v0.1.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          title: 'Report'
           input: '/github/workspace/annotations.json'
