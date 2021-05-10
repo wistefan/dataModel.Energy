@@ -39,4 +39,4 @@ jobs:
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           title: 'Report'
-          input: './annotations.json'
+          input: '/github/workspace/annotations.json'
