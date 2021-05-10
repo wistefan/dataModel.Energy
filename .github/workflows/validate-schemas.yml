@@ -15,24 +15,28 @@ jobs:
 
       - uses:  wistefan/validate-data-model@master
         name: Validate ACMeasurement
-        continue-on-error: true
         with:
           schema-file: 'ACMeasurement/schema.json'
 
       - uses: wistefan/validate-data-model@master
         name: Validate InverterDevice
-        continue-on-error: true
         with:
           schema-file: 'InverterDevice/schema.json'
 
       - uses: wistefan/validate-data-model@master
         name: Validate PhotovoltaicDevice_incubated
-        continue-on-error: true
         with:
           schema-file: 'PhotovoltaicDevice_incubated/schema.json'
 
       - uses: wistefan/validate-data-model@master
         name: Validate ThreePhaseAcMeasurement
-        continue-on-error: true
         with:
           schema-file: 'ThreePhaseAcMeasurement/schema.json'
+
+      - name: Annotate
+        if: always()
+        uses: Attest/annotations-action@v0.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          input: './annotations.json'
+          title: 'Annotate Files'
