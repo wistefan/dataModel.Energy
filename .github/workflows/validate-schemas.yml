@@ -35,8 +35,8 @@ jobs:
 
       - name: Annotate
         if: always()
-        uses: Attest/annotations-action@v1.0.3
+        uses: yuzutech/annotations-action@v0.1.0
         with:
-          secret: ${{ secrets.GITHUB_TOKEN }}
-          path: './annotations.json'
-          title: 'Annotate Files'
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          title: 'Report'
+          input: './annotations.json'
