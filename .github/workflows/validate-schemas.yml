@@ -1,0 +1,34 @@
+name: Generate swagger yaml
+
+on:
+  push:
+
+jobs:
+  validate-schemas:
+
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+
+      - uses:  actions/validate-data-model@master
+        name: Validate ACMeasurement
+        with:
+          schema-file: 'ACMeasurement/schema.json'
+
+      - uses: actions/validate-data-model@master
+        name: Validate InverterDevice
+        with:
+          schema-file: 'InverterDevice/schema.json'
+
+      - uses: actions/validate-data-model@master
+        name: Validate PhotovoltaicDevice_incubated
+        with:
+          schema-file: 'PhotovoltaicDevice_incubated/schema.json'
+
+      - uses: actions/validate-data-model@master
+        name: Validate ThreePhaseAcMeasurement
+        with:
+          schema-file: 'ThreePhaseAcMeasurement/schema.json'

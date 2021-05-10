@@ -146,7 +146,6 @@
         },
         "reactiveEnergyExport": {
           "type": "object",
-          "description": "Property. Model:'https://schema.org/StructuredValue'. Fundamental frequency reactive energy exported per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilovolt-ampere-reactive-hour'",
           "properties": {
             "L1": {
               "type": "number",
