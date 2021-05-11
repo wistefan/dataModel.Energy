@@ -33,11 +33,12 @@ jobs:
         with:
           schema-file: 'ThreePhaseAcMeasurement/schema.json'
 
-      - run: ls -l
+      - name: Upload failure report
         if: always()
-
-      - run: cat annotations.json
-        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: failure-result.json
+          path: failure-result.json
 
       - name: Annotate
         if: always()
