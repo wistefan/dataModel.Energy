@@ -34,6 +34,7 @@ jobs:
           schema-file: 'ThreePhaseAcMeasurement/schema.json'
 
       - run: ls -l
+        if: always()
 
       - name: Annotate
         if: always()
