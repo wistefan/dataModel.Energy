@@ -163,7 +163,7 @@
         },
         "apparentEnergyExport": {
           "type": "object",
-          "description": "Property. Model:'https://schema.org/StructuredValue'. Apparent energy exported per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilovolt-ampere-hour'",
+          "description": "Property Model:'https://schema.org/StructuredValue'. Apparent energy exported per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilovolt-ampere-hour'",
           "properties": {
             "L1": {
               "type": "number",
