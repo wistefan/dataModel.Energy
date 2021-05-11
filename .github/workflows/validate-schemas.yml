@@ -36,6 +36,9 @@ jobs:
       - run: ls -l
         if: always()
 
+      - run: cat annotations.json
+        if: always()
+
       - name: Annotate
         if: always()
         uses: yuzutech/annotations-action@v0.3.0
