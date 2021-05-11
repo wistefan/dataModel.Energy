@@ -33,9 +33,11 @@ jobs:
         with:
           schema-file: 'ThreePhaseAcMeasurement/schema.json'
 
+      - run: ls -l
+
       - name: Annotate
         if: always()
         uses: yuzutech/annotations-action@v0.1.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          input: '/github/workspace/annotations.json'
+          input: 'annotations.json'
